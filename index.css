@@ -4,17 +4,49 @@
   font-weight: normal;
 	font-style: normal;
 }
-@font-face {
-  font-family: "El&fontGohtic!";
-  src: url(el-font-gohtic.woff), url(el-font-gohtic.woff2);
-  font-weight: normal;
-	font-style: normal;
+.header {
+  font-family: "BillieBarred", "Arial", "Helvetica", sans-serif;
+  display: flex;
+  padding: 18px 70px;
+  background-color: darkolivegreen;
 }
-@font-face {
-  font-family: "Kruffy";
-  src: url(kruffy.woff), url(kruffy.woff2);
-  font-weight: normal;
-	font-style: normal;
+.navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+.navigation__links {
+  display: flex;
+  margin: auto auto auto 44px;
+}
+.navigation__link {
+  color: #fff;
+  text-decoration: none;
+  margin-right: 15px;
+  font-size: 16px;
+  line-height: 20px;
+}
+.navigation__profile {
+  display: flex;
+  border: 2px solid rgba(170, 170, 170, 0.2);
+  border-radius: 50px;
+  justify-content: center;
+  align-items: center;
+  width: 100px;
+  height: 22px;
+  text-decoration: none;
+  color: #fff;
+}
+.navigation__icon {
+  width: 12px;
+  height: 14px;
+  margin-right: 7px;
+}
+.navigation__text {
+  margin: 0;
+  font-size: 9px;
+  line-height: 11px;
 }
 .main {
   font-family: "BillieBarred", "Arial", "Helvetica", sans-serif;
