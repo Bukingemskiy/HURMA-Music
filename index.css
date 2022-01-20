@@ -4,6 +4,21 @@
   font-weight: normal;
 	font-style: normal;
 }
+@font-face {
+  font-family: "MangaSpeakBold";
+  src: url(manga-speak-bold.woff), url(manga-speak-bold.woff2);
+  font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+  font-family: "Crystal";
+  src: url(crystal.woff), url(crystal.woff2);
+  font-weight: normal;
+	font-style: normal;
+}
+.page {
+  margin: 0;
+}
 .header {
   font-family: "BillieBarred", "Arial", "Helvetica", sans-serif;
   display: flex;
@@ -24,7 +39,7 @@
   }
 }
 .logo:hover {
-  animation: rotation .9s ease-in-out alternate 2;
+  animation: rotation .8s ease-in-out alternate 2;
 }
 .logo__link {
   height: 38px;
@@ -46,6 +61,7 @@
   font-size: 16px;
   line-height: 20px;
   text-shadow: 8px 8px 8px black;
+  transition: transform linear .1s;
 }
 .navigation__link:hover {
   transform: scale(1.1, 1.1);
@@ -96,5 +112,117 @@
   line-height: 11px;
 }
 .main {
-  font-family: "BillieBarred", "Arial", "Helvetica", sans-serif;
+  font-family: "MangaSpeakBold", "Arial", "Helvetica", sans-serif;
+  background-image: linear-gradient(darkgreen, darkolivegreen);
+}
+.music {
+  font-family: "Crystal", "Arial", "Helvetica", sans-serif;
+  display: flex;
+  justify-content: end;
+}
+.login {
+  width: 396px;
+  display: flex;
+  flex-direction: column;
+  padding: 55px;
+  color: #fff;
+  background-color: darkorange;
+  border-radius: 50px;
+  margin: auto;
+  box-shadow: 0 0 8px;
+}
+.login__title {
+  font-size: 24px;
+  line-height: 28px;
+  margin-top: 25px;
+  text-align: center;
+  text-shadow: 0 0 5px darkgreen;
+}
+.login__form {
+  display: flex;
+  flex-direction: column;
+  margin: 35px auto 0;
+}
+.login__fields {
+  border: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.login__field-name {
+  margin: 10px auto 0;
+  color: #fff;
+  font-size: 12px;
+  line-height: 14px;
+  text-shadow: 0 0 5px darkgreen;
+}
+.login__input {
+  color: darkgreen;
+  font-size: 14px;
+  line-height: 16px;
+  border: none;
+  border-radius: 10px;
+  padding: 15px;
+  background-color: #fff;
+  margin: 10px auto;
+  width: 366px;
+  outline: none;
+}
+.login__button {
+  width: 396px;
+  height: 50px;
+  border: none;
+  border-radius: 5px;
+  background-image: linear-gradient(darkgreen, darkolivegreen);
+  padding: 0;
+  color: #fff;
+  font-size: 18px;
+  line-height: 20px;
+  margin: 125px auto 0;
+  cursor: pointer;
+  text-shadow: 0 0 5px darkgreen;
+}
+.login__button:hover {
+  background-image: linear-gradient(darkolivegreen, darkgreen);
+  animation: swing .9s ease;
+}
+.login__subtitle {
+  margin: 20px auto 0;
+  font-size: 14px;
+  line-height: 16px;
+  color: #fff;
+  text-shadow: 1px 1px 3px darkgreen;
+  text-align: center;
+}
+.login__link {
+  position: relative;
+  color: darkgreen;
+  text-decoration: none;
+  font-size: 16px;
+  line-height: 18px;
+  margin-left: 8px;
+}
+.login__link::after {
+  content: "";
+    display: block;
+    position: absolute;
+    right: 0;
+    bottom: -2px;
+    width: 0;
+    height: 2px;
+    background-color: darkolivegreen;
+    transition: width .8s;
+}
+.login__link:hover::after {
+  content: "";
+  width: 100%;
+  display: block;
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  height: 2px;
+  background-color: darkgreen;
+  transition: width .8s;
 }
