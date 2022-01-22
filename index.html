@@ -10,7 +10,6 @@
   <title>HURMA Music</title>
   <link rel="icon" href="Favicon.png" type="image">
   <link rel="stylesheet" href="index.css">
-  <script src="index.js"></script>
 </head>
 
 <body class="page">
@@ -35,20 +34,44 @@
   </header>
   <main class="main">
     <section class="music">
-      <audio controls src="Awesome-and-Eternally.mp3" loop>
+      <div class="audio-player">
+        <div class="player-top">
+          <h2 class="title">Awesome and Eternally</h2>
+          <button class="top-button">
+            <img class="top-icon" src="Like off.png">
+          </button>
+          <button class="top-button">
+            <img class="top-icon" src="Favorite off.png">
+          </button>
+        </div>
+        <div class="icon-container">
+          <img src="Awesome-and-Eternally.jpg" class="audio-icon">
+        </div>
+        <audio src="Awesome-and-Eternally.mp3" loop></audio>
+        <div class="controls">
+          <button class="player-button">
+            <img class="button-icon" src="Play.png">
+          </button>
+          <input type="range" class="timeline" max="100" value="0">
+          <button class="sound-button">
+            <img class="button-icon" src="Volume.png">
+          </button>
+        </div>
+      </div>
     </section>
     <section class="login">
-      <Logo />
       <h2 class="login__title">Come in guys</h2>
       <form class="login__form">
         <fieldset class="login__fields">
           <div class="login__field">
-            <p class="login__field-name">Login</p>
-            <input class="login__input" type="text" name="login" placeholder="Login" minLength="3" required />
+            <label class="login__field-name" for="login">Login</label>
+            <input class="login__input" type="text" id="login" name="login" placeholder="Login" minLength="3"
+              required />
           </div>
           <div class="login__field">
-            <p class="login__field-name">Password</p>
-            <input class="login__input" type="password" name="password" minLength="8" placeholder="Password" required />
+            <label class="login__field-name" for="password">Password</label>
+            <input class="login__input" type="password" id="password" name="password" minLength="8"
+              placeholder="Password" required />
           </div>
         </fieldset>
         <button class="login__button" type="submit">
@@ -68,6 +91,7 @@
 
     </nav>
   </footer>
+  <script src="index.js"></script>
 </body>
 
 </html>
